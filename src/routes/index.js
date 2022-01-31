@@ -14,7 +14,31 @@ route.get('/contact',(req,res)=>{
 })
 
 route.get('/services',(req,res)=>{
-    res.render('services')
+    res.render('service')
+})
+
+route.get('/softwareDevelopment',(req,res)=>{
+    res.render('Software_Development')
+})
+
+route.get('/digitalMarketing',(req,res)=>{
+    res.render('Digital_Marketing')
+})
+
+route.get('/webDevelopment',(req,res)=>{
+    res.render('Web_Development')
+})
+
+route.get('/graphicDesigner',(req,res)=>{
+    res.render('Graphic_Designer')
+})
+
+route.get('/crmServices',(req,res)=>{
+    res.render('CRM_Services')
+})
+
+route.get('/videoEditing',(req,res)=>{
+    res.render('video_Editing')
 })
 
 route.get('/service-details',(req,res)=>{
@@ -42,7 +66,8 @@ route.get('/customer-info',(req,res)=>{
 })
 
 route.get('*',(req,res)=>{
-    res.render('page-not-found')
+    // res.render('page-not-found')
+    res.send("<h1>This Page is does not exist<h1>")
 })
 
 module.exports = route
